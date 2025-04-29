@@ -2,6 +2,7 @@ public class Circulo {
     //4 niveles de acceso
     //public , private , protected , default
     //Se ha hecho un implemento del método de sobrecargar y el uso de excepciones
+    //Se genera las excepciones apra evitar que el programa se cierre de golpe 
     protected double radio;
     
     public Circulo(){}

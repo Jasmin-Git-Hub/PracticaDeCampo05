@@ -28,6 +28,13 @@ public class VerificarEdad {
        }  catch(IllegalArgumentException e){
            System.out.println("Excepción atrapada: " + e.getMessage());
        }
+
+       try{
+        validador.verificarEdad(15, 102);
+       }  catch(IllegalArgumentException e){
+           System.out.println("Excepción atrapada: " + e.getMessage());
+       }
     }
+
     
 }

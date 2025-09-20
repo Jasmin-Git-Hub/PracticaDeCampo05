@@ -30,7 +30,7 @@ public class VerificarEdad {
        }
 
        try{
-        validador.verificarEdad(102);
+        validador.verificarEdad(102,100);
        }  catch(IllegalArgumentException e){
            System.out.println("Excepción atrapada: " + e.getMessage());
        }

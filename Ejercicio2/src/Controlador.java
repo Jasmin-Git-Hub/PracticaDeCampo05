@@ -39,9 +39,10 @@ public class Controlador {
                 case 2: 
                     this.demoConversor();
                     break;
-                case 4:this.demoBanco();
+                case 4:this.demoBanco();break; 
                 default:
-                    throw new AssertionError();
+                   System.out.println("Opción inválida, intenta de nuevo");
+                   break;  
             }
         }while(true && !false); 
     }
@@ -63,15 +64,16 @@ public class Controlador {
     }
     private void demoBanco()
     {
-     Banco B= new Banco();
+     Banco banco = new Banco();
         Banco.actulizartasaInteres(6.5);
-        System.out.println("la tasa actulizada (6.5) ");
+        System.out.println("La tasa actualizada es: " + Banco.mostrarTasaInteres() + "%");
         
-        System.out.println("la tasa de interes actual es"+Banco.mostrarTasaInteres()+"%");
-        
+        banco.agregarCuenta(new Cuenta("Pedro", 1100));
+        banco.agregarCuenta(new Cuenta("Juan", 2700));
+        banco.mostrarCuentas();
         Banco.actulizartasaInteres(8.2);
-        System.out.println("se actulizo la tasa de interes a 8.2%");
-         System.out.println(" la tasa de interes actual es "+ Banco.mostrarTasaInteres()+"%");
+        System.out.println(" la tasa de interes actual es "+ Banco.mostrarTasaInteres()+"%");
+        banco.mostrarCuentas();
         
     }
 }

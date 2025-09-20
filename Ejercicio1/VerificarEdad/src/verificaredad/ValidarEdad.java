@@ -21,7 +21,7 @@ public class ValidarEdad {
        throw new IllegalArgumentException("La edad debe ser mayor a 18. ");
      }
      if(edad>max){
-       throw new IllegalArgumentException("La edad no debe ser mayor de 100. ");
+       throw new IllegalArgumentException("La edad debe ser menor de 100. ");
      }
      System.out.println("Edad invalida: " + edad);
   }  

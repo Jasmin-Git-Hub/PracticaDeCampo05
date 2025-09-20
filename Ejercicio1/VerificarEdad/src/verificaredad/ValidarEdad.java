@@ -15,4 +15,14 @@ public class ValidarEdad {
      }
         System.out.println("Edad valida: " + edad);
     }
-}
+
+    public void VerificarEdad(int edad, int max){
+    if(edad<18){
+       throw new IllegalArgumentException("La edad debe ser mayor a 18. ");
+     }
+     if(edad>max){
+       throw new IllegalArgumentException("La edad no debe ser mayor de 100. ");
+     }
+     System.out.println("Edad invalida: " + edad);
+  }  
+ }
